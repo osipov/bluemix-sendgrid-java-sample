@@ -1,0 +1,10 @@
+applications:
+- disk_quota: 1024M
+  host: bluemix-sendgrid-java-${random-word}
+  name: bluemix-sendgrid-java-sample
+  path: webStarterApp.war
+  domain: mybluemix.net
+  instances: 1
+  memory: 512M
+  services:
+  - mySendgrid 
