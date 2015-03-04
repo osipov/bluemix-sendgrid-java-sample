@@ -1,4 +1,4 @@
-# SendGrid
+#SendGrid
 
 ##Sendgrid Email as a Service
 
@@ -10,18 +10,9 @@ To try the sample Sendgrid application, change directory to ```bluemix-sendgrid-
 
 ```
 ant
-
-Buildfile: /Users/osipov/Projects/bluemix-sendgrid-java-sample/build.xml
-
-clean:
-
-...
-
-BUILD SUCCESSFUL
-Total time: 0 seconds
 ```
 
-Next, deploy to Bluemix by executing the following commands:
+Make sure that the ant build completes successfully and deploy to Bluemix by executing the following commands:
 
 ```
 cf login
@@ -40,16 +31,8 @@ Next execute the following commands from your console, to specify custom to/from
 
 ```
 cf set-env sendgrid TO_EMAIL bluemix@mailinator.com
-cf set-env sendgrid FROM_EMAIL foo@bar.com
+cf set-env sendgrid FROM_EMAIL bluemix@ibm.com
 cf restage sendgrid
 ```
 
 Open your favorite browser using the URL ending with mybluemix.net (such as sendgrid-random-word.mybluemix.net in the example above) from the console output to access the application. 
-
-**To install pre-requisites for a local deployment**
-
-Via [Composer](https://getcomposer.org/)
-
-``` bash
-$ composer install
-```
